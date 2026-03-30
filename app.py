@@ -23,8 +23,10 @@ cur.execute('''CREATE TABLE IF NOT EXISTS cases(
 conn.commit()
 conn.close()
 
-@app.route('/')
+@app.route('/', methods=['GET', 'HEAD'])
 def home():
+    if request.method == 'HEAD':
+        return '', 200
     return render_template('index.html')
 
 @app.route('/report')
