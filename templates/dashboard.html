@@ -1,1 +1,47 @@
-<!DOCTYPE html><html><body><h2>Dashboard</h2>{% for c in cases %}<p>{{c}}</p>{% endfor %}</body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Dashboard – Fraud Rescue</title>
+    /static/css/style.css
+</head>
+<body>
+
+<header class="header">
+    <div class="nav">
+        /static/logo.svg
+        <nav>
+            /
+        </nav>
+    </div>
+</header>
+
+<section class="dashboard-section">
+    <h2>Case Management Dashboard</h2>
+
+    <table class="case-table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Description</th>
+            <th>File</th>
+            <th>Status</th>
+        </tr>
+
+        {% for c in cases %}
+        <tr>
+            <td>{{ c[0] }}</td>
+            <td>{{ c[1] }}</td>
+            <td>{{ c[2] }}</td>
+            <td>{{ c[3] }}</td>
+            <td>{{ c[4] }}</td>
+            <td>{{ c[5] }}</td>
+            <td><span class="status">{{ c[6] }}</span></td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+
+</body>
+</html>
