@@ -1,1 +1,319 @@
-body{font-family:Arial;}
+/* ===========================
+   GLOBAL / DEFAULT STYLING
+   =========================== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1a1a1a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ===========================
+   HEADER & NAVIGATION
+   =========================== */
+.header {
+    background: #0a2342;
+    padding: 15px 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav img {
+    height: 45px;
+}
+
+nav a {
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero {
+    background: linear-gradient(rgba(10,35,66,0.7), rgba(10,35,66,0.7)),
+                url('https://images.unsplash.com/photo-1557804506-669a67965ba0')
+                center/cover no-repeat;
+    color: white;
+    padding: 130px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 20px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: #f2b705;
+    color: #0a2342;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #ffdb4d;
+}
+
+/* ===========================
+   MISSION SECTION
+   =========================== */
+.mission {
+    width: 85%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.mission p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===========================
+   SCAM TYPES SECTION
+   =========================== */
+.scam-types {
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+.scam-types h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.scam-grid {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.scam-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-left: 5px solid #0a2342;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.scam-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ===========================
+   TRUST SECTION
+   =========================== */
+.trust {
+    padding: 60px 0;
+    background: #eef2f7;
+}
+
+.trust h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.trust-grid {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.trust-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 4px solid #f2b705;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.trust-card h4 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ===========================
+   REPORT FORM PAGE
+   =========================== */
+.form-section {
+    width: 85%;
+    margin: 60px auto;
+    max-width: 700px;
+}
+
+.form-section h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.form-desc {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #0a2342;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 25px;
+    background: #0a2342;
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #143a63;
+}
+
+/* ===========================
+   ADMIN LOGIN PAGE
+   =========================== */
+.admin-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.admin-card {
+    width: 360px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.admin-card img {
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.admin-card h2 {
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   DASHBOARD TABLE
+   =========================== */
+.dashboard-section {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.dashboard-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.case-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.case-table th {
+    background: #0a2342;
+    color: white;
+    padding: 12px;
+    font-weight: 700;
+}
+
+.case-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.status {
+    padding: 6px 12px;
+    background: #f2b705;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+    background: #0a2342;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    margin-top: 50px;
+    font-size: 14px;
+}
