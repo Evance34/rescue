@@ -1,1 +1,49 @@
-<!DOCTYPE html><html><body><h2>Report</h2><form action='/submit' method='POST' enctype='multipart/form-data'><input name='name'><br><input name='email'><br><input name='phone'><br><textarea name='desc'></textarea><br><input type='file' name='file'><button>Submit</button></form></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report a Scam – Fraud Rescue</title>
+    /static/css/style.css
+</head>
+<body>
+
+<header class="header">
+    <div class="nav">
+        /static/logo.svg-img">
+        <nav>
+            /
+            /report
+        </nav>
+    </div>
+</header>
+
+<section class="form-section">
+    <h2>Submit a Scam Report</h2>
+    <p class="form-desc">Fill out the information below — our analysts will review your case and contact you if further details are needed.</p>
+
+    /submit
+
+        <label>Your Full Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" required>
+
+        <label>Case Description</label>
+        <textarea name="desc" rows="6" required placeholder="Explain what happened…"></textarea>
+
+        <label>Upload Supporting Evidence (Screenshots, PDFs, etc.)</label>
+        <input type="file" name="file">
+
+        <button type="submit" class="cta-button">Submit Report</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <p>© 2026 Fraud Rescue – Scam Support & Documentation Service</p>
+</footer>
+
+</body>
+</html>
