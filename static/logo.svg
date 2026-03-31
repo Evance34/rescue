@@ -1,0 +1,5 @@
+<svg width="210" height="60" viewBox="0 0 210 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="210" height="60" fill="#0a2342" rx="8"></rect>
+  <path d="M20 40 L30 15 L40 40 Z" fill="#f2b705"/>
+  <text x="55" y="38" fill="#ffffff" font-family="Segoe UI" font-size="26" font-weight="bold">FRAUD RESCUE</text>
+</svg>
