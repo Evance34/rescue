@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Report a Scam – Fraud Rescue</title>
-    /static/css/style.css
+
+    <!-- ✅ FIXED CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
 <header class="header">
     <div class="nav">
-        /static/logo.svg-img">
+        <!-- ✅ FIXED LOGO -->
+        <img src="{{ url_for('static', filename='logo.svg') }}" alt="Fraud Rescue Logo">
+
         <nav>
-            /
-            /report
+            <a href="/">Home</a>
+            <a href="/report">Report Scam</a>
         </nav>
     </div>
 </header>
 
 <section class="form-section">
     <h2>Submit a Scam Report</h2>
-    <p class="form-desc">Fill out the information below — our analysts will review your case and contact you if further details are needed.</p>
+    <p class="form-desc">
+        Provide accurate details so our analysts can review your case properly.
+    </p>
 
-    /submit
-
-        <label>Your Full Name</label>
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <label>Full Name</label>
         <input type="text" name="name" required>
 
         <label>Email Address</label>
@@ -32,9 +38,9 @@
         <input type="text" name="phone" required>
 
         <label>Case Description</label>
-        <textarea name="desc" rows="6" required placeholder="Explain what happened…"></textarea>
+        <textarea name="desc" rows="6" required></textarea>
 
-        <label>Upload Supporting Evidence (Screenshots, PDFs, etc.)</label>
+        <label>Upload Evidence</label>
         <input type="file" name="file">
 
         <button type="submit" class="cta-button">Submit Report</button>
@@ -42,7 +48,7 @@
 </section>
 
 <footer class="footer">
-    <p>© 2026 Fraud Rescue – Scam Support & Documentation Service</p>
+    <p>© 2026 Fraud Rescue</p>
 </footer>
 
 </body>
