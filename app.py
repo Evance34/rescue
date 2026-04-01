@@ -67,7 +67,7 @@ def admin():
 
 @app.route('/login', methods=['POST'])
 def login():
-    if request.form['user'] == 'admin' and request.form['pw'] == 'password':
+    if request.form['user'] == 'Adminlog' and request.form['pw'] == 'PasswordSafe26':
         session['admin'] = True
         return redirect('/dashboard')
     return 'Invalid login'
