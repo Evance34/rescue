@@ -305,7 +305,57 @@ form button:hover {
     border-radius: 4px;
     font-weight: 600;
 }
+/* ===========================
+   IMPACT / STATISTICS SECTION
+   =========================== */
+.impact {
+    background: #ffffff;
+    padding: 70px 0;
+    text-align: center;
+}
 
+.impact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #0a2342;
+}
+
+.impact-subtitle {
+    font-size: 17px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #555;
+}
+
+.impact-grid {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.impact-card {
+    background: #f4f6f9;
+    padding: 35px 20px;
+    border-radius: 8px;
+    border-top: 5px solid #f2b705;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.impact-number {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    color: #0a2342;
+    margin-bottom: 8px;
+}
+
+.impact-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
 /* ===========================
    FOOTER
    =========================== */
