@@ -2,11 +2,10 @@
 <html>
 <head>
     <title>Admin Login – Fraud Rescue</title>
-    <link rel="stylesheet" href="/static
+    { url_for('static', filename='css/style.css') }}
 
 <section class="admin-section">
-    <div class="admin-card">
-        /static/logo.svg
+    <img src="{{ url_for('static', filename='logo.svg') }}" alt="Fraud Rescue Logo">
         <h2>Administrator Login</h2>
 
         /login method="POST">
