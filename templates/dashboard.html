@@ -2,15 +2,16 @@
 <html>
 <head>
     <title>Case Dashboard – Fraud Rescue</title>
-    /static/css/style.css
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
 <header class="header">
     <div class="nav">
-        /static/logo.svg
+        <img src="{{ url_for('static', filename='logo.svg') }}" alt="Fraud Rescue Logo">
         <nav>
-            /
+            <a href="/">Home</a>
         </nav>
     </div>
 </header>
@@ -25,7 +26,6 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Description</th>
-            <th>File</th>
             <th>Status</th>
         </tr>
 
@@ -36,7 +36,6 @@
             <td>{{ c[2] }}</td>
             <td>{{ c[3] }}</td>
             <td>{{ c[4] }}</td>
-            <td>{{ c[5] }}</td>
             <td><span class="status">{{ c[6] }}</span></td>
         </tr>
         {% endfor %}
