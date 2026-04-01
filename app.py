@@ -6,8 +6,8 @@ from email.mime.text import MIMEText
 app = Flask(__name__)
 app.secret_key = 'secret'
 
-def db():
-    return sqlite3.connect('cases.db')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, 'cases.db')
 
 conn = db()
 cur = conn.cursor()
