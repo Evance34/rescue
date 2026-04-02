@@ -35,31 +35,46 @@ def report():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    f = request.files['file']
-    fname = f.filename
-    if fname:
-        f.save(os.path.join('uploads', fname))
+    try:
+        # Get form data
+        name = request.form.get('name')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        desc = request.form.get('desc')
 
-    d = request.form
-    conn = db()
-    cur = conn.cursor()
-    cur.execute('INSERT INTO cases(name,email,phone,desc,file,status) VALUES(?,?,?,?,?,?)',
-                (d['name'], d['email'], d['phone'], d['desc'], fname, 'Pending'))
-    conn.commit()
-    conn.close()
+        # Handle file (optional)
+        file = request.files.get('file')
+        filename = file.filename if file else "No file uploaded"
 
-    # EMAIL
-    msg = MIMEText(f"New report from {d['name']} {d['email']}")
-    msg['Subject'] = 'New Report'
-    msg['From'] = os.getenv('GMAIL_USER')
-    msg['To'] = os.getenv('GMAIL_USER')
+        # Build email message
+        body = f"""
+        NEW FRAUD REPORT SUBMITTED
 
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as s:
-        s.login(os.getenv('GMAIL_USER'), os.getenv('GMAIL_PASS'))
-        s.send_message(msg)
+        Name: {name}
+        Email: {email}
+        Phone: {phone}
 
-    return 'Report submitted.'
+        Description:
+        {desc}
+
+        Uploaded File: {filename}
+        """
+
+        msg = MIMEText(body)
+        msg['Subject'] = 'New Fraud Report Submitted'
+        msg['From'] = os.getenv('GMAIL_USER')
+        msg['To'] = os.getenv('GMAIL_USER')
+
+        context = ssl.create_default_context()
+
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as server:
+            server.login(os.getenv('GMAIL_USER'), os.getenv('GMAIL_PASS'))
+            server.send_message(msg)
+
+        return "Report submitted successfully. Our team will review your case."
+
+    except Exception as e:
+        return f"Error submitting report: {str(e)}", 500
 
 @app.route('/admin')
 def admin():
