@@ -1,7 +1,8 @@
-
-from flask import Flask,request,render_template,redirect,session
-import sqlite3,os,ssl,smtplib
+import os
+import ssl
+import smtplib
 from email.mime.text import MIMEText
+from flask import request
 
 app = Flask(__name__)
 app.secret_key = 'secret'
