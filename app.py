@@ -45,6 +45,18 @@ def home():
 def report():
     return render_template("report.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+    
+    @app.route("/privacy")
+def about():
+    return render_template("privacy.html")
+    
+    @app.route("/terms")
+def about():
+    return render_template("terms.html")
+    
 @app.route("/submit", methods=["POST"])
 def submit():
     try:
