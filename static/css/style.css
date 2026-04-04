@@ -1,369 +1,199 @@
-/* ===========================
-   GLOBAL / DEFAULT STYLING
-   =========================== */
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f6f9;
-    color: #1a1a1a;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
+/* RESET */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* ===========================
-   HEADER & NAVIGATION
-   =========================== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #f8fafc;
+}
+
+/* CONTAINER */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* HEADER */
 .header {
-    background: #0a2342;
-    padding: 15px 0;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .nav {
-    width: 90%;
+    max-width: 1100px;
     margin: auto;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav img {
-    height: 45px;
+    height: 40px;
 }
 
-nav a {
-    color: #ffffff;
+.nav a {
+    text-decoration: none;
+    color: #374151;
     margin-left: 20px;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.nav a:hover {
+    color: #111827;
 }
 
-/* ===========================
-   HERO SECTION
-   =========================== */
+/* HERO */
 .hero {
-    background: linear-gradient(rgba(10,35,66,0.7), rgba(10,35,66,0.7)),
-                url('https://images.unsplash.com/photo-1557804506-669a67965ba0')
-                center/cover no-repeat;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
-    padding: 130px 20px;
     text-align: center;
+    padding: 100px 20px;
 }
 
-.hero-content h1 {
-    font-size: 48px;
+.hero h1 {
+    font-size: 36px;
     margin-bottom: 15px;
-    font-weight: 700;
 }
 
-.hero-content p {
-    max-width: 750px;
+.hero p {
+    max-width: 600px;
     margin: auto;
-    font-size: 20px;
+    font-size: 16px;
+    opacity: 0.9;
 }
 
-/* Call to Action Button */
 .cta-button {
+    margin-top: 25px;
     display: inline-block;
-    margin-top: 30px;
-    padding: 14px 35px;
-    background: #f2b705;
-    color: #0a2342;
-    font-size: 18px;
-    font-weight: 700;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
     border-radius: 6px;
-    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .cta-button:hover {
-    background: #ffdb4d;
+    background: #1d4ed8;
 }
 
-/* ===========================
-   MISSION SECTION
-   =========================== */
-.mission {
-    width: 85%;
-    margin: 60px auto;
-    text-align: center;
-}
-
-.mission h2 {
-    font-size: 32px;
+/* HEADINGS */
+h2 {
+    font-size: 26px;
     margin-bottom: 15px;
+    color: #111827;
 }
 
-.mission p {
-    max-width: 900px;
-    margin: auto;
+h3 {
     font-size: 18px;
-    line-height: 1.6;
-}
-
-/* ===========================
-   SCAM TYPES SECTION
-   =========================== */
-.scam-types {
-    background: #ffffff;
-    padding: 60px 0;
-}
-
-.scam-types h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-
-.scam-grid {
-    width: 85%;
-    margin: auto;
-    display: grid;
-    gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.scam-card {
-    background: #f8f9fa;
-    padding: 25px;
-    border-left: 5px solid #0a2342;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.scam-card h3 {
-    margin-top: 0;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-/* ===========================
-   TRUST SECTION
-   =========================== */
-.trust {
-    padding: 60px 0;
-    background: #eef2f7;
-}
-
-.trust h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 40px;
-}
-
-.trust-grid {
-    width: 85%;
-    margin: auto;
-    display: grid;
-    gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.trust-card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    border-top: 4px solid #f2b705;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-.trust-card h4 {
-    margin-top: 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* ===========================
-   REPORT FORM PAGE
-   =========================== */
-.form-section {
-    width: 85%;
-    margin: 60px auto;
-    max-width: 700px;
-}
-
-.form-section h2 {
-    font-size: 30px;
-    text-align: center;
-}
-
-.form-desc {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 16px;
-}
-
-form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #0a2342;
-}
-
-form input,
-form textarea,
-form select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border-radius: 6px;
-    border: 1px solid #ced4da;
-    font-size: 16px;
-}
-
-form button {
-    margin-top: 25px;
-    background: #0a2342;
-    color: #fff;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #143a63;
-}
-
-/* ===========================
-   ADMIN LOGIN PAGE
-   =========================== */
-.admin-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-}
-
-.admin-card {
-    width: 360px;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    text-align: center;
-}
-
-.admin-card img {
-    height: 55px;
-    margin-bottom: 15px;
-}
-
-.admin-card h2 {
-    margin-bottom: 20px;
-}
-
-/* ===========================
-   DASHBOARD TABLE
-   =========================== */
-.dashboard-section {
-    width: 90%;
-    margin: 50px auto;
-}
-
-.dashboard-section h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-.case-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-.case-table th {
-    background: #0a2342;
-    color: white;
-    padding: 12px;
-    font-weight: 700;
-}
-
-.case-table td {
-    padding: 12px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.status {
-    padding: 6px 12px;
-    background: #f2b705;
-    border-radius: 4px;
-    font-weight: 600;
-}
-/* ===========================
-   IMPACT / STATISTICS SECTION
-   =========================== */
-.impact {
-    background: #ffffff;
-    padding: 70px 0;
-    text-align: center;
-}
-
-.impact h2 {
-    font-size: 32px;
     margin-bottom: 10px;
-    color: #0a2342;
 }
 
-.impact-subtitle {
-    font-size: 17px;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    color: #555;
-}
-
-.impact-grid {
-    width: 85%;
-    margin: auto;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.impact-card {
-    background: #f4f6f9;
-    padding: 35px 20px;
-    border-radius: 8px;
-    border-top: 5px solid #f2b705;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.impact-number {
-    display: block;
-    font-size: 42px;
-    font-weight: 800;
-    color: #0a2342;
+h4 {
+    font-size: 16px;
     margin-bottom: 8px;
 }
 
-.impact-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
+/* TEXT */
+p {
+    color: #4b5563;
+    margin-bottom: 15px;
 }
-/* ===========================
-   FOOTER
-   =========================== */
-.footer {
-    background: #0a2342;
-    color: #ffffff;
+
+/* GRIDS */
+.process-grid,
+.scam-grid,
+.trust-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* CARDS */
+.process-card,
+.scam-card,
+.trust-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.process-card:hover,
+.scam-card:hover,
+.trust-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* CONTACT */
+.contact {
     text-align: center;
-    padding: 18px;
-    margin-top: 50px;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+    background: #fff7ed;
+    border-top: 1px solid #fed7aa;
+    border-bottom: 1px solid #fed7aa;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.disclaimer p {
+    color: #9a3412;
     font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+    background: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+    .process-grid,
+    .scam-grid,
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .process-grid,
+    .scam-grid,
+    .trust-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
 }
